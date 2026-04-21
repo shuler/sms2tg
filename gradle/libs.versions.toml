@@ -1,6 +1,6 @@
 [versions]
 agp = "8.7.3"
-kotlin = "2.1.0"
+kotlin = "2.3.20"
 coreKtx = "1.15.0"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
@@ -8,7 +8,7 @@ composeBom = "2024.12.01"
 workManager = "2.10.0"
 securityCrypto = "1.1.0"
 okhttp = "4.12.0"
-serialization = "1.7.3"
+serialization = "1.11.0"
 viewmodelCompose = "2.8.7"
 
 [libraries]
