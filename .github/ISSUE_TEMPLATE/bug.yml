@@ -1,0 +1,91 @@
+name: Bug report
+description: Something isn't working — SMS not forwarded, crash, etc.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in as much as you can.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead?
+      placeholder: SMS from +1... never arrived in Telegram. Status card says "Last incoming SMS: none yet".
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Install app v0.1.0
+        2. Configure bot, enable forwarding
+        3. Send an SMS to the device
+        4. …
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      description: Manufacturer + model
+      placeholder: "Xiaomi Redmi Note 13 Pro"
+    validations:
+      required: true
+
+  - type: input
+    id: android-version
+    attributes:
+      label: Android / OEM skin version
+      description: Android version and, if applicable, MIUI/HyperOS/OneUI/ColorOS version.
+      placeholder: "Android 14 / HyperOS 1.0.3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scenario
+    attributes:
+      label: When does it fail?
+      options:
+        - App is open / in foreground
+        - App was recently used, then backgrounded
+        - App has been closed for a while
+        - After device reboot
+        - I don't know
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: prereqs
+    attributes:
+      label: Diagnostic checklist
+      description: What does the status card show?
+      options:
+        - label: "RECEIVE_SMS permission granted"
+        - label: "Bot configured (✓ on status card)"
+        - label: "Chat linked (✓ on status card)"
+        - label: "Forwarding enabled (switch on)"
+        - label: "Test message (Step 4) delivered successfully at least once"
+        - label: "Disabled battery optimization for SMS2TG"
+        - label: "On MIUI/HyperOS: enabled Autostart in Security app"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: logcat (optional)
+      description: |
+        If you can grab it, please include `adb logcat | grep -i sms2tg`.
+        Redact any bot token you might see.
+      render: shell

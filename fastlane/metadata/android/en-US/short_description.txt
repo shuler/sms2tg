@@ -1,0 +1,1 @@
+Forward incoming SMS to a private Telegram chat via your own bot.

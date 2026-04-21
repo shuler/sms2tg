@@ -1,0 +1,15 @@
+SMS2TG forwards incoming SMS messages from your Android phone to a private Telegram chat using a Telegram bot that you create and control. No third‑party servers are involved — the only external host your device talks to is api.telegram.org.
+
+<b>Features</b>
+
+• Background‑first. A foreground service keeps the SMS receiver alive even when the app is closed, including on aggressive OEM skins (MIUI/HyperOS, ColorOS, EMUI).
+• Private by design. The bot token is stored in Android Keystore via EncryptedSharedPreferences and never leaves your device.
+• Reliable delivery. Outgoing messages are handed to WorkManager with exponential backoff; network drops and transient Telegram errors retry automatically.
+• Guided setup. A 4‑step wizard walks you through BotFather → token → chat binding → test message.
+• Diagnostics built in. A status card surfaces permission state, last SMS seen, last delivery, last error.
+• Customizable template. MarkdownV2 template with {from} / {body} placeholders and optional SIM slot for dual‑SIM.
+• OEM hints. On Xiaomi / Redmi / POCO devices, a dedicated button opens MIUI's autostart settings.
+
+<b>No tracking</b>
+
+SMS2TG contains no analytics, no crash reporters and no advertising SDKs. The only network destination is api.telegram.org.

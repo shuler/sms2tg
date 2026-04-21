@@ -1,0 +1,17 @@
+.gradle/
+.kotlin/
+build/
+.idea/
+local.properties
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.keystore
+*.jks
+keystore.properties
+
+# LLM working notes
+llm/

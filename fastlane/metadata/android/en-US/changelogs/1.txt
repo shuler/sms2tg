@@ -1,0 +1,8 @@
+Initial public release.
+
+- 4‑step setup wizard: BotFather → token → chat binding → test message.
+- Foreground service keeps the SMS receiver alive in the background.
+- Boot receiver restarts forwarding after reboot when enabled.
+- Bot token stored encrypted via Android Keystore.
+- WorkManager delivery with exponential backoff.
+- MIUI / HyperOS autostart shortcut on Xiaomi / Redmi / POCO.
