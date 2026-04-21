@@ -22,7 +22,7 @@ jobs:
 
       - uses: android-actions/setup-android@v3
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v6
 
       - name: Lint
         run: ./gradlew lintDebug --stacktrace
