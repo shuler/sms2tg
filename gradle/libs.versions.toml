@@ -1,15 +1,15 @@
 [versions]
 agp = "8.7.3"
 kotlin = "2.1.0"
-coreKtx = "1.15.0"
-lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.3"
-composeBom = "2024.12.01"
-workManager = "2.10.0"
+coreKtx = "1.18.0"
+lifecycleRuntimeKtx = "2.10.0"
+activityCompose = "1.13.0"
+composeBom = "2026.03.01"
+workManager = "2.11.2"
 securityCrypto = "1.1.0"
 okhttp = "4.12.0"
 serialization = "1.7.3"
-viewmodelCompose = "2.8.7"
+viewmodelCompose = "2.10.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
